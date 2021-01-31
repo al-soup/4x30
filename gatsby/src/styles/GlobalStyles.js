@@ -6,15 +6,14 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --red: #af505a;
     --black: #2E2E2E;
-    /* --yellow: #ffc600; */
     --yellow: #FFFDD8;
+    --darkwhite: #fdfcfa;
     --white: #fff;
     --grey: #efefef;
     --turquoise: #d3f0de;
     --orange: #b9834d;
     --darkgreen: #729981;
     --green: #afb464;
-
   }
   html {
     /* background by SVGBackgrounds.com */
@@ -22,6 +21,9 @@ const GlobalStyles = createGlobalStyle`
     background-size: 450px;
     background-attachment: fixed;
     font-size: 10px;
+    @media(max-width: 1300px) {
+      background-size: 300px;
+    }
   }
 
   body {
@@ -49,9 +51,9 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
+    // TODO: Try different img renderers
   .gatsby-image-wrapper img[src*=base64\\,] {
     image-rendering: -moz-crisp-edges;
-    /* TODO: Try different img renderers */
     image-rendering: pixelated;
   }
 
