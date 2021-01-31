@@ -4,11 +4,17 @@ import stripes from '../assets/images/stripes.svg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --red: #FF4949;
+    --red: #af505a;
     --black: #2E2E2E;
-    --yellow: #ffc600;
+    /* --yellow: #ffc600; */
+    --yellow: #FFFDD8;
     --white: #fff;
     --grey: #efefef;
+    --turquoise: #d3f0de;
+    --orange: #b9834d;
+    --darkgreen: #729981;
+    --green: #afb464;
+
   }
   html {
     /* background by SVGBackgrounds.com */
