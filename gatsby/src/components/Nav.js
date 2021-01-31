@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 const NavStyles = styled.nav` // is scoped
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
   ul {
     margin: 0;
     padding: 0;
@@ -33,7 +33,7 @@ const NavStyles = styled.nav` // is scoped
     }
   }
   a {
-    font-size: 4rem;
+    font-size: 5rem;
     text-decoration: none;
     &:hover {
       color: var(--red)
@@ -46,7 +46,7 @@ export default function Nav() {
     <NavStyles>
       <ul>
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/signup">Infos</Link></li>
+        <li><Link to="/infos">Infos</Link></li>
         <li><Link to="/signup">Anmelden</Link></li>
         <li><Link to="/faq">FAQ</Link></li>
       </ul>
