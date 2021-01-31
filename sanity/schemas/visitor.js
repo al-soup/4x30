@@ -36,7 +36,7 @@ export default {
         layout: 'checkbox'
       }
     }
-
+    // anazahl personen
 
   ]
 }

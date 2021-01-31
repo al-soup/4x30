@@ -23,11 +23,11 @@ const NavStyles = styled.nav` // is scoped
       --rotate: 0.5deg;
     }
     &:nth-child(2) {
-      --rotate: -1.5deg;
+      --rotate: -0.5deg;
     }
-    &:nth-child(4) {
+    /* &:nth-child(4) {
       --rotate: 1.5deg;
-    }
+    } */
     &:hover {
       --rotate: 1.5deg;
     }
