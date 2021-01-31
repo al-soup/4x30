@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "kutp3su7",
+    "projectId": "rxrh22q3",
     "dataset": "production"
   },
   "project": {
-    "name": "slicks-slices"
+    "name": "4x30"
   },
   "plugins": [
     "@sanity/base",
