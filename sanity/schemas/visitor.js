@@ -46,7 +46,10 @@ export default {
     prepare: ({ title, ...timeSlots }) => {
       return {
         title,
-        subtitle: Object.values(timeSlots).filter(Boolean).join(", ")
+        subtitle: Object.values(timeSlots)
+          .filter(Boolean)
+          .sort((a, b) => a.title - b.title)
+          .join(", ")
       }
     }
   }
