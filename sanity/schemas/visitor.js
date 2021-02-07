@@ -1,4 +1,4 @@
-import { GiPartyHat as icon } from "react-icons/gi";
+import { FaUser as icon } from "react-icons/fa";
 // https://react-icons.github.io/react-icons/icons?name=md
 
 export default {
