@@ -11,7 +11,6 @@ export default {
       name: "email",
       title: "Email",
       type: "string",
-
       description: "Email address of visitor"
     },
     {
@@ -21,22 +20,34 @@ export default {
       description: "Name of visitor"
     },
     {
-      name: "attendance",
-      title: "Anwesenheit",
-      type: "string",
-      description: "What time the visitor plans to show up"
-      // TODO: Validation enums
+      name: "companions",
+      title: "Begleitung",
+      description: "Who the visitor will be accompanied by",
+      type: "array",
+      of: [{ type: "string" }]
     },
     {
-      name: "camping",
-      title: "Campieren",
-      type: "boolean",
-      description: "If the visitor plans on camping or not",
-      options: {
-        layout: 'checkbox'
+      name: "attendance",
+      title: "Anwesenheit",
+      description: "What time the visitor and companions plan to attend",
+      type: "array",
+      of: [{ type: "reference", to: [{ type: "timeSlot"}] }]
+    }
+  ],
+  preview: {
+    select: {
+      title: "name",
+      slot0: "attendance.0.title",
+      slot1: "attendance.1.title",
+      slot2: "attendance.2.title",
+      slot3: "attendance.3.title",
+      slot4: "attendance.4.title",
+    },
+    prepare: ({ title, ...timeSlots }) => {
+      return {
+        title,
+        subtitle: Object.values(timeSlots).filter(Boolean).join(", ")
       }
     }
-    // anazahl personen
-
-  ]
+  }
 }

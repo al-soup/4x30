@@ -5,13 +5,15 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // Then we give our schema to the builder and provide the result to Sanity
 
 import visitor from "./visitor";
-import companion from "./companion";
-import attendance from "./attendance";
+import timeSlot from "./time-slot";
 
 export default createSchema({
   // We name our schema
   name: "default",
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([visitor, companion, attendance]),
+  types: schemaTypes.concat([
+    visitor,
+    timeSlot
+  ]),
 });
