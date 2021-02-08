@@ -6,6 +6,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 
 import visitor from "./visitor";
 import timeSlot from "./time-slot";
+import faq from "./faq";
 
 export default createSchema({
   // We name our schema
@@ -14,6 +15,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     visitor,
-    timeSlot
+    timeSlot,
+    faq
   ]),
 });

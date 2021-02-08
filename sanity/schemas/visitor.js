@@ -48,9 +48,9 @@ export default {
         title,
         subtitle: Object.values(timeSlots)
           .filter(Boolean)
-          .sort((a, b) => a.title - b.title)
-          .join(", ")
-      }
+          .sort()
+          .join("  | ")
+      };
     }
   }
 }
