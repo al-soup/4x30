@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 const BirthdayBoysGridStyles = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 4rem;
-  grid-auto-rows: 500px auto auto auto;
+  grid-auto-rows: 300px auto auto auto;
 `;
 
 export default function BirthdayBoysGrid({ birthdayBoys }) {

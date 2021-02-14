@@ -16,10 +16,10 @@ const SiteBorderStyles = styled.div`
   padding: 0 0.3rem 0.3rem 0.3rem;
   box-shadow: 0 0 5px 3px rgba(0,0,0,0.15);
   border: 5px solid var(--yellow);
-  /* @media(max-width: 1300px) {
+  @media(max-width: 1300px) {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
-  } */
+  }
 `;
 
 const ContentStyles = styled.div`
