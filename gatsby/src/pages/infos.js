@@ -1,3 +1,4 @@
+import { graphql } from "gatsby";
 import React from 'react';
 
 export default function InfosPage() {

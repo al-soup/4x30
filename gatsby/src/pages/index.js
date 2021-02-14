@@ -1,7 +1,8 @@
+import { graphql } from "gatsby";
 import React from 'react';
 
-export default function HomePage() {
-
+export default function HomePage({ data: { birthdayBoys }}) {
+  console.log(birthdayBoys)
   return (
     <>
       <h1>Home</h1>
@@ -11,3 +12,22 @@ export default function HomePage() {
     </>
   )  
 }
+
+export const pageQuery = graphql`
+  query BirthdayBoyQuery {
+    birthdayBoys: allSanityBirthdayBoy {
+      nodes {
+        name,
+        birhtday,
+        description,
+        image {
+          asset {
+            fluid(maxWidth: 400) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;

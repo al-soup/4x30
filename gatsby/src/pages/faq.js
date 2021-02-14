@@ -1,7 +1,9 @@
 import React from "react";
+import { graphql } from "gatsby";
 
 
-export default function FaqPage() {
+export default function FaqPage({ data: { faqs }}) {
+  console.log(faqs);
   return (
     <>
       <h1>Fragen & Antworten</h1>
@@ -11,3 +13,14 @@ export default function FaqPage() {
     </>
   )
 }
+
+export const pageQuery = graphql`
+  query FaqBoyQuery {
+    faqs: allSanityFaq {
+      nodes {
+        answer
+        question
+      }
+    }
+  }
+`;

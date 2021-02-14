@@ -22,10 +22,9 @@ export default {
       type: "string"
     },
     {
-      name: "imgage",
+      name: "image",
       title: "Bild",
-      type: "imgae"
+      type: "image"
     }
-    
   ]
 }
