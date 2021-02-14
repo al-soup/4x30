@@ -12,7 +12,7 @@ export default {
       type: "string"
     },
     {
-      name: "birhtday",
+      name: "birthday",
       title: "Geburtstag",
       type: "string"
     },

@@ -1,6 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import peeps from '../assets/images/peeps.svg';
-import stripes from '../assets/images/stripes.svg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -15,6 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --darkgreen: #729981;
     --green: #afb464;
   }
+
   html {
     /* background by SVGBackgrounds.com */
     background-image: url(${peeps});
@@ -68,14 +68,6 @@ const GlobalStyles = createGlobalStyle`
     background-color: var(--red) ;
     border-radius: 6px;
     border: 3px solid var(--white);
-  }
-
-  hr {
-    /* TODO: Change HR  */
-    border: 0;
-    height: 8px;
-    background-image: url(${stripes});
-    background-size: 1500px;
   }
 
   img {
