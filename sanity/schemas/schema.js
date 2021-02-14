@@ -4,9 +4,11 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 // Then we give our schema to the builder and provide the result to Sanity
 
+// Schemas
 import visitor from "./visitor";
 import timeSlot from "./time-slot";
 import faq from "./faq";
+import birthdayBoy from "./birthday-boy";
 
 export default createSchema({
   // We name our schema
@@ -16,6 +18,7 @@ export default createSchema({
   types: schemaTypes.concat([
     visitor,
     timeSlot,
-    faq
+    faq,
+    birthdayBoy
   ]),
 });
