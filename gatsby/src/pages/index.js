@@ -22,9 +22,9 @@ export const pageQuery = graphql`
     birthdayBoys: allSanityBirthdayBoy {
       nodes {
         id,
-        name,
-        birthday,
-        description,
+        name
+        birthday
+        description
         image {
           asset {
             fluid(maxWidth: 400) {
