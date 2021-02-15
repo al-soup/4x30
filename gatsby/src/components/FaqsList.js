@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FaqsListStyles = styled.div`
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 2rem;
