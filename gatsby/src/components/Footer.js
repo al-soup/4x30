@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaGithub as GithubIcon } from "react-icons/fa"
+import { FaGithub as GithubIcon } from "react-icons/fa";
 
 const FooterStyles = styled.div`
   display: grid;
