@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import peeps from '../assets/images/peeps.svg';
+import peeps from '../assets/images/svg/peeps.svg';
 
 const GlobalStyles = createGlobalStyle`
   :root {

@@ -1,13 +1,14 @@
 import { graphql } from "gatsby";
 import React from 'react';
 import BirthdayBoysGrid from "../components/BirthdayBoysGrid";
+import HippieLogo from "../components/HippieLogo";
 
 export default function HomePage({ data }) {
   const birthdayBoys = data.birthdayBoys.nodes;
   console.log(birthdayBoys)
   return (
     <>
-      <h1>Home</h1>
+      <HippieLogo />
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam eius, sapiente iure ipsum rem ut voluptatibus asperiores ab, placeat, vero quia error! Adipisci corporis maxime aperiam inventore, aspernatur nisi.</p>
       <h1>Birthday Boys</h1>
       <BirthdayBoysGrid birthdayBoys={ birthdayBoys } />
