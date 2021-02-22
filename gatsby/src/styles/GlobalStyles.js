@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import peeps from '../assets/images/svg/peeps.svg';
+import dots from '../assets/images/svg/dots.svg';
 
 const GlobalStyles = createGlobalStyle`
   :root {
@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     /* background by SVGBackgrounds.com */
-    background-image: url(${peeps});
+    background-image: url(${dots});
     background-size: 450px;
     background-attachment: fixed;
     font-size: 10px;

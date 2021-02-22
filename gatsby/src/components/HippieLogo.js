@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Logo from "../assets/images/svg/logo.svg";
+import Logo from "../assets/images/svg/logo.inline.svg";
 
 // TODO: Adaot for different screens:
 // wider on medium screens
