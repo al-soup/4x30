@@ -13,6 +13,8 @@ const GlobalStyles = createGlobalStyle`
     --orange: #b9834d;
     --darkgreen: #729981;
     --green: #afb464;
+
+    --bottom: 10rem; 
   }
 
   html {

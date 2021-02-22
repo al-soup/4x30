@@ -9,7 +9,7 @@ export default function FaqPage({ data }) {
   return (
     <>
       <h1>Fragen & Antworten</h1>
-      <FaqList faqs={faqs} />
+      <FaqList faqs={ faqs } />
     </>
   )
 }

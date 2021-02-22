@@ -8,6 +8,10 @@ const ScheduleTableStyled = styled.table`
   width: 100%;
   font-size: 1.6rem;
   border: none;
+  th {
+    text-align: left;
+    padding: 1rem;
+  }
   td, tr {
     background-color: var(--green);
 
@@ -43,46 +47,58 @@ export default function ScheduleTable() {
           <th className="what">Was</th>
         </tr>
         <tr>
-          <td className="when day">Freitag</td>
-          <td className="when time">17:45</td>
-          <td className="what">Treffpunk am Bahnhofe blablabla</td>
+          <td className="when day" rowspan="2">Freitag 9. Juli</td>
+          <td className="when time">17:30</td>
+          <td className="what">Woodstock-Marsch vom Bahnhof Aarberg nach Niederried (ca. X km)</td>
         </tr>
         <tr>
-          <td className="when day">Freitag</td>
           <td className="when time">Abend</td>
-          <td className="what">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda modi dicta accusantium esse sequi quo voluptate! Fugiat iure tenetur ullam, numquam architecto delectus quisquam ad voluptatibus excepturi. Ipsam, ad vel?</td>
+          <td className="what">Einquartieren auf Zeltplatz, dann BBQ am Lagerfeuer</td>
         </tr>
         <tr>
-          <td className="when day">Samstag</td>
-          <td className="when time">Ab 12 Uhr</td>
-          <td className="what">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque numquam ad aspernatur error officiis, eos, nemo tempore necessitatibus commodi quis laborum ratione suscipit veniam nobis nam inventore possimus ipsum cupiditate.</td>
+          <td className="when day" rowspan="5">Samstag 10. Juli</td>
+          <td className="when time">Mittag</td>
+          <td className="what">Eröffnung Foodtrucks</td>
         </tr>
         <tr>
-          <td className="when day">Samstag</td>
           <td className="when time">Nachmittag</td>
-          <td className="what">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt recusandae nisi qui animi consequatur commodi unde aut, earum deleniti? Doloremque rem, cumque deserunt nostrum dolore assumenda maiores quisquam doloribus sit.</td>
-        </tr>
-        <tr>
-          <td className="when day">Samstag</td>
-          <td className="when time">Abend</td>
           <td className="what">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             <ul>
-              <li>Odio libero labore quo maxime doloribus unde ad itaque.</li>
-              <li>Atque blanditiis voluptatibus voluptatum numquam voluptatem asperiores commodi non porro tempora qui. Enim?</li>
-              <li>Odio libero labore quo maxime doloribus unde ad itaque.</li>
+              <li>Pingpong</li>
+              <li>Beachvolleyball</li>
+              <li>Brückenspringen</li>
+              <li>Kube</li>
+              <li>Cornhole</li>
+              <li>Spikeball</li>
+              <li>Petanque</li>
+              <li>...und vieles mehr</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td className="when day">Sonntag</td>
+          <td className="when time">Vorabend</td>
+          <td className="what">Barbetrieb und Foodtrucks <br/> Ansprache der vier Geburtstagsjungen</td>
+        </tr>
+        <tr>
+          <td className="when time">Abend</td>
+          <td className="what">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank">Tschäppi und Manu</a> am Lagerfeuer</td>
+        </tr>
+        <tr>
+          <td className="when time">Nacht</td>
+          <td className="what">Woodstock-Party im Zelt mit DJ’s von Hospitium Crew sowie Comeback von Tim & Struppi</td>
+        </tr>
+        <tr>
+          <td className="when day" rowspan="3">Sonntag 11. Juli</td>
           <td className="when time">Vormittag</td>
           <td className="what">Brunch</td>
         </tr>
         <tr>
-          <td className="when day">Sonntag</td>
           <td className="when time">Mitte Nachmittag</td>
-          <td className="what">Zusammenpacken und gemeinsam zum Bahnhof laufen</td>
+          <td className="what">Baden & Chillen <br/> Zelt abbauen, aufräumen</td>
+        </tr>
+        <tr>
+          <td className="when time">Späterer Nachmittag</td>
+          <td className="what">Gemeinsamer Woodstock-Marsch zurück nach Aarberg</td>
         </tr>
       </ScheduleTableStyled>
     </>
