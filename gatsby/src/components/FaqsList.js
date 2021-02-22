@@ -24,6 +24,7 @@ const FaqCardStyles = styled.div`
   border-radius: 8px;
   p {
     margin-bottom: 0;
+    text-align:  center;
   }
 `;
 
