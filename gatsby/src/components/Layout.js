@@ -25,6 +25,7 @@ const SiteBorderStyles = styled.div`
 const ContentStyles = styled.div`
   background: var(--yellow);  
   padding: 2rem;
+  padding-bottom: 15rem;
 `;
 
 export default function Layout({ children }) {
@@ -36,8 +37,8 @@ export default function Layout({ children }) {
         <ContentStyles>
           <Nav />
           { children }
-          <Footer />
         </ContentStyles>
+        <Footer />
       </SiteBorderStyles>
     </>
   );

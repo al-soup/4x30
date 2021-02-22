@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "styled-components";
 
 const NavStyles = styled.nav` // is scoped
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
   ul {
     margin: 0;
     padding: 0;

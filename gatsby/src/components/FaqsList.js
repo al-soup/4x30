@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const FaqsListStyles = styled.div`
+  margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 2rem;
@@ -23,6 +24,7 @@ const FaqCardStyles = styled.div`
   border-radius: 8px;
   p {
     margin-bottom: 0;
+    text-align:  center;
   }
 `;
 

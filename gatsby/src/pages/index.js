@@ -1,18 +1,27 @@
 import { graphql } from "gatsby";
 import React from 'react';
+import styled from "styled-components";
 import BirthdayBoysGrid from "../components/BirthdayBoysGrid";
+import HippieLogo from "../components/HippieLogo";
+
+const HomePageStyles = styled.div`
+  p.subtitle {
+    font-size: 3rem;
+    text-align: center;
+    margin: 4rem 0 4rem 0;
+  }
+`;
 
 export default function HomePage({ data }) {
   const birthdayBoys = data.birthdayBoys.nodes;
-  console.log(birthdayBoys)
   return (
     <>
-      <h1>Home</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam eius, sapiente iure ipsum rem ut voluptatibus asperiores ab, placeat, vero quia error! Adipisci corporis maxime aperiam inventore, aspernatur nisi.</p>
-      <h1>Birthday Boys</h1>
-      <BirthdayBoysGrid birthdayBoys={ birthdayBoys } />
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam eius, sapiente iure ipsum rem ut voluptatibus asperiores ab, placeat, vero quia error! Adipisci corporis maxime aperiam inventore, aspernatur nisi. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquid sed dignissimos consequatur cumque exercitationem iure ipsum quaerat fugiat repudiandae quisquam perferendis repellendus illo tempore numquam, eaque quo molestiae placeat odio.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam eius, sapiente iure ipsum rem ut voluptatibus asperiores ab, placeat, vero quia error! Adipisci corporis maxime aperiam inventore, aspernatur nisi.</p>
+      <HomePageStyles>
+        <HippieLogo />
+        <p className="subtitle">Alex, Moritz, Luca und Nils kennen sich seit Schulzeiten und werden alle dieses Jahr 30 Jahre alt. Aus diesem Anlass wollen wir gemeinsam mit unseren Freunden und Familienangehörigen ein schönes und unvergessliches Fest durchführen. Gemäss dem Motto Woodstock nehmen wir uns 3 Tage Zeit fürs gemütliche Beisammensein, den Sommer und die Natur zu geniessen, zum Schlemmen, zur Musik zu tanzen und zu feiern.</p>
+        <h1>Birthday Boys</h1>
+        <BirthdayBoysGrid birthdayBoys={ birthdayBoys } />
+      </HomePageStyles>
     </>
   );
 }

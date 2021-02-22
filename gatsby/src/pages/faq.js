@@ -9,8 +9,7 @@ export default function FaqPage({ data }) {
   return (
     <>
       <h1>Fragen & Antworten</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam eius, sapiente iure ipsum rem ut voluptatibus asperiores ab, placeat, vero quia error! Adipisci corporis maxime aperiam inventore, aspernatur nisi.</p>
-      <FaqList faqs={faqs} />
+      <FaqList faqs={ faqs } />
     </>
   )
 }
