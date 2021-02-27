@@ -19,6 +19,7 @@ const ScheduleTableStyled = styled.table`
   tr > td {
     border: 4px solid var(--yellow);
     padding: 1rem;
+    filter: brightness(120%);
   }
   .header {
     border: 4px solid var(--green);
@@ -33,6 +34,9 @@ const ScheduleTableStyled = styled.table`
   }
   .day {
     font-weight: bold;
+  }
+  .saturday {
+    filter: brightness(110%);
   }
 `;
 
@@ -56,13 +60,13 @@ export default function ScheduleTable() {
           <td className="what">Einquartieren auf Zeltplatz, dann BBQ am Lagerfeuer</td>
         </tr>
         <tr>
-          <td className="when day" rowspan="5">Samstag 10. Juli</td>
-          <td className="when time">Mittag</td>
-          <td className="what">Eröffnung Foodtrucks</td>
+          <td className="when day saturday" rowspan="5">Samstag 10. Juli</td>
+          <td className="when time saturday">Mittag</td>
+          <td className="what saturday">Eröffnung Foodtrucks</td>
         </tr>
         <tr>
-          <td className="when time">Nachmittag</td>
-          <td className="what">
+          <td className="when time saturday">Nachmittag</td>
+          <td className="what saturday">
             <ul>
               <li>Pingpong</li>
               <li>Beachvolleyball</li>
@@ -76,16 +80,16 @@ export default function ScheduleTable() {
           </td>
         </tr>
         <tr>
-          <td className="when time">Vorabend</td>
-          <td className="what">Barbetrieb und Foodtrucks <br/> Ansprache der vier Geburtstagsjungen</td>
+          <td className="when time saturday">Vorabend</td>
+          <td className="what saturday">Barbetrieb und Foodtrucks <br/> Ansprache der vier Geburtstagsjungen</td>
         </tr>
         <tr>
-          <td className="when time">Abend</td>
-          <td className="what">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank">Tschäppi und Manu</a> am Lagerfeuer</td>
+          <td className="when time saturday">Abend</td>
+          <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank">Tschäppi und Manu</a> am Lagerfeuer</td>
         </tr>
         <tr>
-          <td className="when time">Nacht</td>
-          <td className="what">Woodstock-Party im Zelt mit DJ’s von Hospitium Crew sowie Comeback von Tim & Struppi</td>
+          <td className="when time saturday">Nacht</td>
+          <td className="what saturday">Woodstock-Party im Zelt mit DJ’s von Hospitium Crew sowie Comeback von Tim & Struppi</td>
         </tr>
         <tr>
           <td className="when day" rowspan="3">Sonntag 11. Juli</td>
