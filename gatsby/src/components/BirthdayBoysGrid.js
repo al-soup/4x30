@@ -40,11 +40,11 @@ const BirthdayBoyCardStyles = styled.div`
   .detail-container {
     transform: rotate(1deg);
     text-align: center;
-    margin-top: -2rem;
+    margin-top: -3.5rem;
   }
   .detail {
     background-color: var(--orange);
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 3px;
   }
 `;
@@ -56,7 +56,7 @@ function BirthdayBoyCard({ birthdayBoy }) {
           <h2>{birthdayBoy.name}</h2>
           <Img fluid={birthdayBoy.image.asset.fluid} alt={birthdayBoy.name}/>
           <div className="detail-container">
-            <span className="detail">{birthdayBoy.birthday}</span><br/>
+            <span className="detail"><i>{birthdayBoy.birthday}</i></span><br/>
             <span className="detail">{birthdayBoy.description}</span>
           </div>
       </BirthdayBoyCardStyles>
