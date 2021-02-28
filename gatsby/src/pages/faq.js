@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import FaqList from "../components/FaqsList";
+import SEO from "../components/SEO";
 
 
 export default function FaqPage({ data }) {
@@ -8,8 +9,10 @@ export default function FaqPage({ data }) {
   console.log(faqs);
   return (
     <>
+      <SEO title="FAQs" />
       <h1>Fragen & Antworten</h1>
       <FaqList faqs={ faqs } />
+      {/* TODO: Corona hervorheben */}
     </>
   )
 }

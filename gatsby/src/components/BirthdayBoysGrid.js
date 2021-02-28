@@ -6,7 +6,8 @@ const BirthdayBoysGridStyles = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 4rem;
-  grid-auto-rows: 300px auto auto auto;
+  grid-auto-rows: auto 300px auto auto;
+  margin-top: 2rem;
 `;
 
 export default function BirthdayBoysGrid({ birthdayBoys }) {
@@ -22,16 +23,29 @@ export default function BirthdayBoysGrid({ birthdayBoys }) {
 const BirthdayBoyCardStyles = styled.div`
   display: grid;
   @supports not (grid-template-rows: subgrid) {
-    grid-template-rows: 1fr, auto, auto, auto
+    grid-template-rows: auto, 1fr, auto, auto
   }
   grid-template-rows: subgrid; /* Row sizing from BirthdayBoysGridStyles */
   grid-row: span 4;
   grid-gap: 1rem;
   h2 {
-    text-align: left;
+    transform: rotate(-1deg);
+    text-align: center;
+    display: inline;
+    margin-bottom: -2rem;
+    z-index: 4;
+    background-color: var(--orange);
+    padding: 0 2px 2px 2px;
   }
-  h2, p {
-    margin: 0;
+  .detail-container {
+    transform: rotate(1deg);
+    text-align: center;
+    margin-top: -3.5rem;
+  }
+  .detail {
+    background-color: var(--orange);
+    font-size: 2rem;
+    padding: 3px;
   }
 `;
 
@@ -39,10 +53,12 @@ function BirthdayBoyCard({ birthdayBoy }) {
   return (
     <>
       <BirthdayBoyCardStyles>
-          <Img fluid={birthdayBoy.image.asset.fluid} alt={birthdayBoy.name}/>
           <h2>{birthdayBoy.name}</h2>
-          <p>{birthdayBoy.birthday}</p>
-          <p>{birthdayBoy.description}</p>
+          <Img fluid={birthdayBoy.image.asset.fluid} alt={birthdayBoy.name}/>
+          <div className="detail-container">
+            <span className="detail"><i>{birthdayBoy.birthday}</i></span><br/>
+            <span className="detail">{birthdayBoy.description}</span>
+          </div>
       </BirthdayBoyCardStyles>
     </>
   );
