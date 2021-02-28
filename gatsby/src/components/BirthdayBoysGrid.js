@@ -29,15 +29,23 @@ const BirthdayBoyCardStyles = styled.div`
   grid-row: span 4;
   grid-gap: 1rem;
   h2 {
-    transform: rotate(-0.5deg);
+    transform: rotate(-1deg);
     text-align: center;
+    display: inline;
     margin-bottom: -2rem;
     z-index: 4;
     background-color: var(--orange);
     padding: 0 2px 2px 2px;
   }
-  p {
-    margin: 0;
+  .detail-container {
+    transform: rotate(1deg);
+    text-align: center;
+    margin-top: -2rem;
+  }
+  .detail {
+    background-color: var(--orange);
+    font-size: 3rem;
+    padding: 3px;
   }
 `;
 
@@ -47,8 +55,10 @@ function BirthdayBoyCard({ birthdayBoy }) {
       <BirthdayBoyCardStyles>
           <h2>{birthdayBoy.name}</h2>
           <Img fluid={birthdayBoy.image.asset.fluid} alt={birthdayBoy.name}/>
-          <p>{birthdayBoy.birthday}</p>
-          <p>{birthdayBoy.description}</p>
+          <div className="detail-container">
+            <span className="detail">{birthdayBoy.birthday}</span><br/>
+            <span className="detail">{birthdayBoy.description}</span>
+          </div>
       </BirthdayBoyCardStyles>
     </>
   );

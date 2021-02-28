@@ -53,7 +53,7 @@ export default function ScheduleTable() {
         <tr>
           <td className="when day" rowspan="2">Freitag 9. Juli</td>
           <td className="when time">17:30</td>
-          <td className="what">Woodstock-Marsch vom Bahnhof Aarberg nach Niederried (ca. X km)</td>
+          <td className="what">Woodstock-Marsch vom <a href="https://goo.gl/maps/bszm8KGzGWFC4qwM8">Bahnhof Aarberg</a> nach <a href="https://goo.gl/maps/AvdBsikeJ7jRXfxa9">Niederried</a> (ca. 4.5km)</td>
         </tr>
         <tr>
           <td className="when time">Abend</td>
@@ -89,7 +89,7 @@ export default function ScheduleTable() {
         </tr>
         <tr>
           <td className="when time saturday">Nacht</td>
-          <td className="what saturday">Woodstock-Party im Zelt mit DJ’s von Hospitium Crew sowie Comeback von Tim & Struppi</td>
+          <td className="what saturday">Woodstock-Party im Zelt mit DJ’s von Hospitium Crew sowie Comeback von Tim&Struppi</td>
         </tr>
         <tr>
           <td className="when day" rowspan="3">Sonntag 11. Juli</td>
