@@ -1,7 +1,7 @@
-import { graphql } from "gatsby";
 import React from 'react';
 import styled from "styled-components";
 import ScheduleTable from "../components/ScheduleTable";
+import SEO from "../components/SEO";
 
 export default function InfosPage() {
 
@@ -13,6 +13,7 @@ export default function InfosPage() {
 
   return (
     <>
+      <SEO title="Infos" />
       <InfosPageStyles>
         <h3 className="deadline">Anmeldefrist bis 25. Mai!</h3>
         <h1>4x30 Party Infos</h1>
