@@ -26,7 +26,8 @@ export default function InfosPage() {
         <ScheduleTable />
         <h1>Anfahrt</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam eius, sapiente iure ipsum rem ut voluptatibus asperiores ab, placeat, vero quia error! Adipisci corporis maxime aperiam inventore, aspernatur nisi.</p>
-        <p>TODO: Google Maps Karte einbinden</p>
+        {/* TODO: Google Maps Karte einbinden */}
+        {/* TODO: Link to Anmeldung */}
       </InfosPageStyles>
     </>
   )  

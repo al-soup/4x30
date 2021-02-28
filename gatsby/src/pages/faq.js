@@ -12,6 +12,7 @@ export default function FaqPage({ data }) {
       <SEO title="FAQs" />
       <h1>Fragen & Antworten</h1>
       <FaqList faqs={ faqs } />
+      {/* TODO: Corona hervorheben */}
     </>
   )
 }
