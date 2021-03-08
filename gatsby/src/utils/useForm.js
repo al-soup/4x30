@@ -1,15 +1,6 @@
-import { useState } from "react";
-
-export default function useForm(defaults) {
-  const [values, setValues] = useState(defaults);
-
-  function updateValue(e) {
-    let { value } = e.target;
-    setValues({
-      ...values,
-      [e.target.name]: value
-    });
-  }
-
-  return { values, updateValue };
+export default function updateValue(values, setValue, e) {
+  return setValue({
+    ...values,
+    [e.target.name]: e.target.value
+  });
 }

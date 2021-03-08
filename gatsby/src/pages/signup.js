@@ -1,32 +1,33 @@
 import React from "react";
 import SEO from "../components/SEO";
-import useForm from "../utils/useForm";
-import { useState } from "react";
+import updateValue from "../utils/useForm";
 import { graphql } from "gatsby";
+import { useState } from "react";
 import SignupPageStyles from "../styles/SignupPageStyles";
 
 
 {/* TODO: Sort strings */}
 export default function SignupPage({ data }) {
   const timeSlots = data.timeSlots.nodes;
-  const { values, updateValue } = useForm({
+  const [values, setValue] = useState({
     name: "",
     email: "",
     pw: "",
-  });
-  // TODO: Move this to useForm
-  const [checkboxes, setCheckboxes] = useState(
-    timeSlots
+    attendance: timeSlots
       .map(timeSlot => ({ ...timeSlot, attending: Boolean(timeSlot.attending)}))
       // .sort((a, b) => a.slot - b.slot)
-  );
+  });
+
   const handleCheckboxClick = (timeSlot, i) => e => {
-    const changedCheckboxes = [...checkboxes];
+    const changedCheckboxes = [...values.attendance];
     changedCheckboxes[i] = {
       ...timeSlot,
       attending: !timeSlot.attending
     };
-    setCheckboxes(changedCheckboxes);
+    setValue({
+      ...values,
+      attendance: changedCheckboxes
+    });
   };
 
   return (
@@ -44,7 +45,7 @@ export default function SignupPage({ data }) {
                 type="text"
                 name="name"
                 value={values.name}
-                onChange={updateValue}
+                onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
             <label htmlFor="email">
@@ -53,7 +54,7 @@ export default function SignupPage({ data }) {
                 type="email"
                 name="email"
                 value={values.email}
-                onChange={updateValue}
+                onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
             <label htmlFor="pw">
@@ -62,13 +63,13 @@ export default function SignupPage({ data }) {
                 type="password"
                 name="pw"
                 value={values.pw}
-                onChange={updateValue}
+                onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
           </fieldset>
           <fieldset>
             <legend>Wann bist du anwesend?</legend>
-            {checkboxes.map((timeSlot, i) => (
+            {values.attendance.map((timeSlot, i) => (
               <div key={timeSlot.id}>
                 <label htmlFor={timeSlot.slot} >
                 <input
@@ -82,11 +83,8 @@ export default function SignupPage({ data }) {
               </div>)
             )}
           </fieldset>
+          <button type="submit">Anmelding absenden</button>
         </form>
-        {/* TODO: Remove */}
-        {checkboxes.map(x => (
-          <p key={x.id + 2}>{x.description} +++ {x.attending.toString()} </p>
-          ))}
       </SignupPageStyles>
       {/* TODO: Link to FAQs */}
     </>
