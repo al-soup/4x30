@@ -45,7 +45,7 @@ export default function Nav() {
   return (
     <NavStyles>
       <ul>
-        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">Start</Link></li>
         <li><Link to="/infos">Infos</Link></li>
         <li><Link to="/signup">Anmelden</Link></li>
         <li><Link to="/faq">FAQ</Link></li>

@@ -44,7 +44,7 @@ export default function Footer() {
   return (
     <FooterStyles>
       <div>
-        <p>Webseite von Alex Kräuchi | <a href="https://github.com/al-soup/4x30" target="_blank"><wbr/>source code &nbsp;<GithubIcon className="github" /></a></p>
+        <p>Webseite von Alex Kräuchi | <a href="https://github.com/al-soup/4x30" target="_blank" rel="noopener"><wbr/>source code &nbsp;<GithubIcon className="github" /></a></p>
         <p>Logo & Flyer von Chantal Kocher</p>
         <p>&copy; 4x30 Truppe { new Date().getFullYear() }</p>
         <div className="smile-container">

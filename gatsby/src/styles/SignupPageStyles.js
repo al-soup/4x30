@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
-// TODO Finsih styling
+// TODO: Finsih styling
+// TODO: Make checkboxes bigger
 const SignupPageStyles = styled.div`
   font-size: 2rem;
   input {
@@ -14,6 +15,9 @@ const SignupPageStyles = styled.div`
   .who {
     /* display: grid; */
     /* grid-template-rows: 1fr 1fr 1fr 1fr */
+  }
+  .zuppy {
+    display: none;
   }
 `;
 
