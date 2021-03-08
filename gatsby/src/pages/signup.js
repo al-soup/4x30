@@ -1,16 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import SEO from "../components/SEO";
 import useForm from "../utils/useForm";
 import { useState } from "react";
 import { graphql } from "gatsby";
+import SignupPageStyles from "../styles/SignupPageStyles";
 
-const SignupPageStyles = styled.div`
-  font-size: 2rem;
-  input {
-    font-family: Roboto;
-  }
-`;
 
 {/* TODO: Sort strings */}
 export default function SignupPage({ data }) {
@@ -20,6 +14,7 @@ export default function SignupPage({ data }) {
     email: "",
     pw: "",
   });
+  // TODO: Move this to useForm
   const [checkboxes, setCheckboxes] = useState(
     timeSlots
       .map(timeSlot => ({ ...timeSlot, attending: Boolean(timeSlot.attending)}))
@@ -41,29 +36,35 @@ export default function SignupPage({ data }) {
         <h1>Anmelden</h1>
         {/* TODO: Einleitungstext */}
         <form>
-          <fieldset>
+          <fieldset className="who">
             <legend>Wer bist du?</legend>
-            <label htmlFor="name">Vor- & Nachname</label>
-            <input
-              type="text"
-              name="name"
-              value={values.name}
-              onChange={updateValue}
-            />
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              value={values.email}
-              onChange={updateValue}
-            />
-            <label htmlFor="pw">Passwort (ist auf dem Flyer)</label>
-            <input
-              type="password"
-              name="pw"
-              value={values.pw}
-              onChange={updateValue}
-            />
+            <label htmlFor="name">
+              Vor- & Nachname
+              <input
+                type="text"
+                name="name"
+                value={values.name}
+                onChange={updateValue}
+              />
+            </label>
+            <label htmlFor="email">
+              Email
+              <input
+                type="email"
+                name="email"
+                value={values.email}
+                onChange={updateValue}
+              />
+            </label>
+            <label htmlFor="pw">
+              Passwort (ist auf dem Flyer)
+              <input
+                type="password"
+                name="pw"
+                value={values.pw}
+                onChange={updateValue}
+              />
+            </label>
           </fieldset>
           <fieldset>
             <legend>Wann bist du anwesend?</legend>
