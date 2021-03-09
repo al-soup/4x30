@@ -1,5 +1,4 @@
 const sanityClient = require("@sanity/client");
-const { doc } = require("prettier");
 
 /**
  * Sanity client docs: https://www.sanity.io/docs/js-client
@@ -17,7 +16,7 @@ exports.handler = async (event, context) => {
   if (body.zuppy) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: `Meeeerp. Error Code 1984` })
+      body: JSON.stringify({ message: "Meeeerp. Error Code 1984" })
     };
   }
   

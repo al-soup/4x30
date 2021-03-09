@@ -49,7 +49,6 @@ export default function SignupPage({ data }) {
       body: JSON.stringify(body)
     })
     const text = JSON.parse(await res.text());
-    console.log(text);
     if (res.status >= 400 && res.status < 600) {
       setLoading(false);
       setError(text.message);
@@ -113,7 +112,7 @@ export default function SignupPage({ data }) {
           <fieldset disabled={loading}>
             <legend>Wann bist du anwesend?</legend>
             {values.participation.map((attendance, i) => (
-              <div key={attendance.id}>
+              <div key={attendance._id}>
                 <label htmlFor={attendance.slot} >
                 <input
                   type="checkbox"
@@ -144,7 +143,6 @@ export const timeSlotQuery = graphql`
   query TimeSlotQuery {
     timeSlots: allSanityTimeSlot {
       nodes {
-        id
         title
         description
         slot
