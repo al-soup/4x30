@@ -1,0 +1,16 @@
+{
+  "name": "signup",
+  "version": "1.0.0",
+  "description": "Serverless signup function",
+  "main": "signup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "al-soup",
+  "license": "ISC",
+  "dependencies": {
+    "@sanity/client": "^2.2.6",
+    "install": "^0.13.0",
+    "npm": "^7.6.1"
+  }
+}

@@ -10,9 +10,9 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --grey: #efefef;
     --turquoise: #d3f0de;
-    --orange: #b9834d;
+    --orange: #da9057;
     --darkgreen: #729981;
-    --green: #afb464;
+    --green: #c4ca74;
 
     --bottom: 10rem; 
   }
@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   button {
-    background: var(--red);
+    background: var(--orange);
     color: white;
     border: 0;
     padding: 0.6rem 1rem;

@@ -24,11 +24,5 @@ export default {
       description: "Specific time period the visitor plans to be there",
       type: "string"
     },
-    {
-      name: "attending",
-      title: "Anwesend",
-      description: "Is the visitor attending this slot",
-      type: "boolean"
-    }
   ]
 }

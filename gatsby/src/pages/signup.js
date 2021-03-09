@@ -15,23 +15,23 @@ export default function SignupPage({ data }) {
     email: "",
     zuppy: undefined,
     password: "",
-    attendance: timeSlots
-      .map(timeSlot => ({ ...timeSlot, attending: Boolean(timeSlot.attending)}))
+    participation: timeSlots
+      .map(timeSlot => ({ ...timeSlot, attending: false }))
       // .sort((a, b) => a.slot - b.slot)
   });
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState("");
 
-  const handleCheckboxClick = (timeSlot, i) => e => {
-    const checkboxes = [...values.attendance];
+  const handleCheckboxClick = (attendance, i) => e => {
+    const checkboxes = [...values.participation];
     checkboxes[i] = {
-      ...timeSlot,
-      attending: !timeSlot.attending
+      ...attendance,
+      attending: !attendance.attending
     };
     setValue({
       ...values,
-      attendance: checkboxes
+      participation: checkboxes
     });
   };
 
@@ -112,16 +112,16 @@ export default function SignupPage({ data }) {
           </fieldset>
           <fieldset disabled={loading}>
             <legend>Wann bist du anwesend?</legend>
-            {values.attendance.map((timeSlot, i) => (
-              <div key={timeSlot.id}>
-                <label htmlFor={timeSlot.slot} >
+            {values.participation.map((attendance, i) => (
+              <div key={attendance.id}>
+                <label htmlFor={attendance.slot} >
                 <input
                   type="checkbox"
-                  name={timeSlot.slot}
-                  checked={timeSlot.attending}
-                  onChange={handleCheckboxClick(timeSlot, i)}
+                  name={attendance.slot}
+                  checked={attendance.attending}
+                  onChange={handleCheckboxClick(attendance, i)}
                 />
-                &nbsp;{timeSlot.description}
+                &nbsp;{attendance.description}
                 </label>
               </div>)
             )}
@@ -148,7 +148,7 @@ export const timeSlotQuery = graphql`
         title
         description
         slot
-        attending
+        _id
       }
     }
   }
