@@ -9,6 +9,7 @@ import visitor from "./visitor";
 import timeSlot from "./time-slot";
 import faq from "./faq";
 import birthdayBoy from "./birthday-boy";
+import attendance from "./attendance";
 
 export default createSchema({
   // We name our schema
@@ -19,6 +20,7 @@ export default createSchema({
     visitor,
     timeSlot,
     faq,
-    birthdayBoy
+    birthdayBoy,
+    attendance
   ]),
 });

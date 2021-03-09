@@ -27,30 +27,36 @@ export default {
       of: [{ type: "string" }]
     },
     {
-      name: "attendance",
-      title: "Anwesenheit",
+      name: "participation",
+      title: "Teilnahme",
       description: "What time the visitor and companions plan to attend",
       type: "array",
-      of: [{ type: "reference", to: [{ type: "timeSlot"}] }]
+      of: [
+        {
+          name: "attendance",
+          type: "attendance",
+          title: "Anwesenheit"
+        }
+      ]
     }
   ],
-  preview: {
-    select: {
-      title: "name",
-      slot0: "attendance.0.title",
-      slot1: "attendance.1.title",
-      slot2: "attendance.2.title",
-      slot3: "attendance.3.title",
-      slot4: "attendance.4.title",
-    },
-    prepare: ({ title, ...timeSlots }) => {
-      return {
-        title,
-        subtitle: Object.values(timeSlots)
-          .filter(Boolean)
-          .sort()
-          .join("  | ")
-      };
-    }
-  }
+  // preview: {
+  //   select: {
+  //     title: "name",
+  //     slot0: "attendance.0.title",
+  //     slot1: "attendance.1.title",
+  //     slot2: "attendance.2.title",
+  //     slot3: "attendance.3.title",
+  //     slot4: "attendance.4.title",
+  //   },
+  //   prepare: ({ title, ...timeSlots }) => {
+  //     return {
+  //       title,
+  //       subtitle: Object.values(timeSlots)
+  //         .filter(Boolean)
+  //         .sort()
+  //         .join("  | ")
+  //     };
+  //   }
+  // }
 }

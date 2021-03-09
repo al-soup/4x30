@@ -23,6 +23,6 @@ export default {
       title: "Zeitraum",
       description: "Specific time period the visitor plans to be there",
       type: "string"
-    }
+    },
   ]
 }
