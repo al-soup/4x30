@@ -13,6 +13,7 @@ export default function SignupPage({ data }) {
   const [values, setValue] = useState({
     name: "",
     email: "",
+    plusone: "",
     zuppy: undefined,
     password: "",
     participation: timeSlots
@@ -89,7 +90,15 @@ export default function SignupPage({ data }) {
                 onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
-            {/* TODO: Add further guests */}
+            <label>
+            Begleitung (Name reicht)
+              <input
+                type="text"
+                name="plusone"
+                value={values.plusone}
+                onChange={(e) => updateValue(values, setValue, e)}
+              />
+            </label>
             <label className="zuppy">
               Zuppy
               <input
@@ -112,7 +121,7 @@ export default function SignupPage({ data }) {
           <fieldset disabled={loading}>
             <legend>Wann bist du anwesend?</legend>
             {values.participation.map((attendance, i) => (
-              <div key={attendance._id}>
+              <div key={attendance.slotId}>
                 <label htmlFor={attendance.slot} >
                 <input
                   type="checkbox"
@@ -146,7 +155,7 @@ export const timeSlotQuery = graphql`
         title
         description
         slot
-        _id
+        slotId: _id
       }
     }
   }

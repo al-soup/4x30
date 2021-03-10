@@ -44,17 +44,17 @@ exports.handler = async (event, context) => {
     };
   }
 
-  console.log(body)
   try {
     const participation = body.participation.map((attendance, i) => ({
       _type: "attendance",
-      _key: attendance.id + i,
+      _key: `${attendance.slotId}_key_${i}`,
       attending: attendance.attending,
       slot: {
         _type: "reference",
-        _ref: attendance._id
+        _ref: attendance.slotId
       }
     }))
+    console.log("WHERE IS MY KEY???", participation)
 
     const existing = await client.fetch(
       "*[_type == 'visitor' && email == $currentEmail] {_id}",
@@ -62,12 +62,18 @@ exports.handler = async (event, context) => {
     );
 
     if (existing.length && existing[0]._id) {
+      const doc = {
+        name: body.name,
+        plusone: body.plusone ? body.plusone : "",
+        participation
+      }
+
       // Update existing visitor
       const updated = client
         .patch(existing[0]._id)
-        .set({ name: body.name, participation })
+        .set(doc)
         .commit();
-      console.log(`Updated visitor ${updated}`)
+      console.log("Updated visitor", updated)
     }
     else {
       // Create new visitor
@@ -75,6 +81,7 @@ exports.handler = async (event, context) => {
         _type: "visitor",
         name: body.name,
         email: body.email, // TODO: lowercase, trim
+        plusone: body.plusone ? body.plusone : "",
         participation 
       };
       const created = await client.create(doc);

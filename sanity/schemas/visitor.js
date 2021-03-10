@@ -20,11 +20,10 @@ export default {
       description: "Name of visitor"
     },
     {
-      name: "companions",
+      name: "plusone",
       title: "Begleitung",
       description: "Who the visitor will be accompanied by",
-      type: "array",
-      of: [{ type: "string" }]
+      type: "string",
     },
     {
       name: "participation",

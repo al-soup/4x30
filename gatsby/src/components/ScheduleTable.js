@@ -88,7 +88,7 @@ export default function ScheduleTable() {
           </tr>
           <tr>
             <td className="when time saturday">Abend</td>
-            <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank" rel="noopener">Tschäppi und Manu</a> am Lagerfeuer</td>
+            <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank" rel="noopener noreferrer">Tschäppi und Manu</a> am Lagerfeuer</td>
           </tr>
           <tr>
             <td className="when time saturday">Nacht</td>
