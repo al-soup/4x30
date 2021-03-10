@@ -1,9 +1,10 @@
 import React from "react";
 import SEO from "../components/SEO";
-import updateValue from "../utils/useForm";
+import updateValue from "../utils/updateValue";
 import { graphql } from "gatsby";
 import { useState } from "react";
 import SignupPageStyles from "../styles/SignupPageStyles";
+import compareSlot from "../utils/compareSlot";
 
 
 {/* TODO: Sort strings */}
@@ -18,7 +19,7 @@ export default function SignupPage({ data }) {
     password: "",
     participation: timeSlots
       .map(timeSlot => ({ ...timeSlot, attending: false }))
-      // .sort((a, b) => a.slot - b.slot)
+      .sort(compareSlot)
   });
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false)
