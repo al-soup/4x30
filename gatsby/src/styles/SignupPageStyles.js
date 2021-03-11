@@ -8,13 +8,54 @@ const SignupPageStyles = styled.div`
     font-family: Roboto;
   }
   form {
+    margin-top: 5rem;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
+    grid-template-rows: 1fr;
+    gap: 30px;
   }
-  .who {
-    /* display: grid; */
-    /* grid-template-rows: 1fr 1fr 1fr 1fr */
+  fieldset.who {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+  }
+  .user-detail {
+    display: grid;
+    gap: 1rem;
+    align-content: start;
+  }
+  label + label {
+    margin-top: 2rem;
+  }
+  .checkbox-container {
+    margin-bottom: 2rem;
+  }
+  input[type=checkbox]:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  input[type=checkbox]:hover {
+    background: whitesmoke;
+    background-color: whitesmoke;
+  }
+  input[type=checkbox] {
+    background-color: white;
+    border: solid 1px;
+    border-radius: 2px;
+    border-color: grey;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 21px;
+    height: 21px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+  }
+  input[type=checkbox]:checked {
+    background-color: var(--orange);
+    background: var(--orange) url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 4px 4px no-repeat;
+  }
+  .deadline {
+    color: var(--orange);
   }
   .zuppy {
     display: none;

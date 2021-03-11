@@ -68,12 +68,13 @@ export default function SignupPage({ data }) {
     <>
       <SEO title="Anmelden" />
       <SignupPageStyles>
+        <h3 className="deadline">Anmeldefrist bis 25. Mai!</h3>
         <h1>Anmelden</h1>
-        {/* TODO: Einleitungstext */}
+        <p>Damit wir wissen, mit wie vielen Leuten wir ungefähr rechnen können, bitten wir dich bis zum 25. Mai anzumelden.</p>
         <form onSubmit={submitSignup}>
           <fieldset className="who" disabled={loading}>
             <legend>Wer bist du?</legend>
-            <label htmlFor="name">
+            <label htmlFor="name" className="user-detail">
               Vor- & Nachname
               <input
                 type="text"
@@ -82,7 +83,7 @@ export default function SignupPage({ data }) {
                 onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
-            <label htmlFor="email">
+            <label htmlFor="email" className="user-detail">
               Email
               <input
                 type="email"
@@ -91,7 +92,7 @@ export default function SignupPage({ data }) {
                 onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
-            <label>
+            <label htmlFor="plusone" className="user-detail">
             Begleitung (Name reicht)
               <input
                 type="text"
@@ -100,7 +101,7 @@ export default function SignupPage({ data }) {
                 onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
-            <label className="zuppy">
+            <label htmlFor="zuppy" className="zuppy">
               Zuppy
               <input
                 type="text"
@@ -109,7 +110,7 @@ export default function SignupPage({ data }) {
                 onChange={(e) => updateValue(values, setValue, e)}
               />
             </label>
-            <label htmlFor="password">
+            <label htmlFor="password" className="user-detail">
               Passwort (ist auf dem Flyer)
               <input
                 type="password"
@@ -122,16 +123,16 @@ export default function SignupPage({ data }) {
           <fieldset disabled={loading}>
             <legend>Wann bist du anwesend?</legend>
             {values.participation.map((attendance, i) => (
-              <div key={attendance.slotId}>
-                <label htmlFor={attendance.slot} >
+              <div key={attendance.slotId} className="checkbox-container">
                 <input
                   type="checkbox"
+                  id={attendance.slot}
                   name={attendance.slot}
                   checked={attendance.attending}
                   onChange={handleCheckboxClick(attendance, i)}
                 />
-                &nbsp;{attendance.description}
-                </label>
+                <span className="checkmark"></span>
+                <label htmlFor={attendance.slot}>&nbsp;{attendance.description}</label>
               </div>)
             )}
           </fieldset>
