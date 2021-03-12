@@ -4,7 +4,7 @@ import styled from "styled-components";
 import BirthdayBoysGrid from "../components/BirthdayBoysGrid";
 import HippieLogo from "../components/HippieLogo";
 import SEO from "../components/SEO";
-import Next from "../components/Next";
+import NextStep from "../components/NextStep";
 
 const HomePageStyles = styled.div`
   p.subtitle {
@@ -24,7 +24,7 @@ export default function HomePage({ data }) {
         <p className="subtitle">Alex, Moritz, Luca und Nils kennen sich seit Schulzeiten und werden alle dieses Jahr 30 Jahre alt. Aus diesem Anlass wollen wir gemeinsam mit unseren Freunden und Familienangehörigen ein schönes und unvergessliches Fest durchführen. Gemäss dem Motto Woodstock nehmen wir uns 3 Tage Zeit fürs gemütliche Beisammensein, den Sommer und die Natur zu geniessen, zum Schlemmen, zur Musik zu tanzen und zu feiern.</p>
         <h1>Birthday Boys</h1>
         <BirthdayBoysGrid birthdayBoys={ birthdayBoys } />
-        <Next link={"/infos"} text={"Okay...um was geht es genau? Hier mehr Infos"}></Next>
+        <NextStep link={"/infos"} text={"Okay...um was geht es genau? Hier mehr Infos"}></NextStep>
       </HomePageStyles>
     </>
   );

@@ -5,7 +5,7 @@ import { graphql } from "gatsby";
 import { useState } from "react";
 import SignupPageStyles from "../styles/SignupPageStyles";
 import compareSlot from "../utils/compareSlot";
-import Next from "../components/Next";
+import NextStep from "../components/NextStep";
 
 
 {/* TODO: Sort strings */}
@@ -159,7 +159,7 @@ export default function SignupPage({ data }) {
               Hinweis: Etwas stimmte nicht? Doch anders anwesend? Das Formular einfach noch einmal mit der <u>gleichen</u> Email Adresse ausfüllen.
             </i>
           </p>
-          <Next link={"/faq"} text={"Noch Fragen? Hier sind die Antworten"}></Next>
+          <NextStep link={"/faq"} text={"Noch Fragen? Hier sind die Antworten"}></NextStep>
         </form>
       </SignupPageStyles>
     </>

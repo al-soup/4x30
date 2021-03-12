@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const NextStyled = styled.div`
+const NextStepStyled = styled.div`
   font-size: 2rem;
   display: flex;
   align-items: center;
@@ -10,10 +10,10 @@ const NextStyled = styled.div`
   margin-top: 8rem;
 `;
 
-export default function({ text, link }) {
+export default function NextStep({ text, link }) {
   return (
-    <NextStyled>
+    <NextStepStyled>
       <Link to={link}>{text}</Link>
-    </NextStyled>
+    </NextStepStyled>
   )
 }

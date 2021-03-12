@@ -57,6 +57,7 @@ const SignupPageStyles = styled.div`
   }
   .hint {
     font-size: 1.5rem;
+    margin-bottom: 0;
   }
   .zuppy {
     display: none;

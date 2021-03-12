@@ -2,7 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import ScheduleTable from "../components/ScheduleTable";
 import SEO from "../components/SEO";
-import Next from "../components/Next";
+import NextStep from "../components/NextStep";
 
 export default function InfosPage() {
 
@@ -30,7 +30,7 @@ export default function InfosPage() {
         <ScheduleTable />
         <h1>Anfahrt</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aliquam eius, sapiente iure ipsum rem ut voluptatibus asperiores ab, placeat, vero quia error! Adipisci corporis maxime aperiam inventore, aspernatur nisi.</p>
-        <Next link={"/signup"} text={"Hört sich gut an? Hier kannst du dich anmelden"}></Next>
+        <NextStep link={"/signup"} text={"Hört sich gut an? Hier kannst du dich anmelden"}></NextStep>
       </InfosPageStyles>
     </>
   )  
