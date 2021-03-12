@@ -5,6 +5,7 @@ import { graphql } from "gatsby";
 import { useState } from "react";
 import SignupPageStyles from "../styles/SignupPageStyles";
 import compareSlot from "../utils/compareSlot";
+import Next from "../components/Next";
 
 
 {/* TODO: Sort strings */}
@@ -71,7 +72,7 @@ export default function SignupPage({ data }) {
       <SignupPageStyles>
         <h3 className="deadline">Anmeldefrist bis 25. Mai!</h3>
         <h1>Anmelden</h1>
-        <p>Damit wir wissen, mit wie vielen Leuten wir ungefähr rechnen können, bitten wir dich bis zum 25. Mai anzumelden.</p>
+        <p>Damit wir wissen, mit wie vielen Leuten wir ungefähr rechnen können, bitten wir dich, bis zum 25. Mai die Anmeldung auszufüllen.</p>
         <form onSubmit={submitSignup}>
           <fieldset className="who" disabled={loading}>
             <legend>Wer bist du?</legend>
@@ -80,6 +81,8 @@ export default function SignupPage({ data }) {
               <input
                 type="text"
                 name="name"
+                required
+                minLength="3"
                 maxLength={MAX_LENGTH}
                 value={values.name}
                 onChange={(e) => updateValue(values, setValue, e)}
@@ -90,6 +93,7 @@ export default function SignupPage({ data }) {
               <input
                 type="email"
                 name="email"
+                required
                 maxLength={MAX_LENGTH}
                 value={values.email}
                 onChange={(e) => updateValue(values, setValue, e)}
@@ -120,6 +124,7 @@ export default function SignupPage({ data }) {
               <input
                 type="password"
                 name="password"
+                required
                 maxLength={MAX_LENGTH}
                 value={values.password}
                 onChange={(e) => updateValue(values, setValue, e)}
@@ -149,9 +154,14 @@ export default function SignupPage({ data }) {
           <button type="submit" disabled={loading}>
             {loading ? "Anmeldung wird versendet..." : "Jetzt Anmelden!"}
           </button>
+          <p className="hint">
+            <i>
+              Hinweis: Etwas stimmte nicht? Doch anders anwesend? Das Formular einfach noch einmal mit der <u>gleichen</u> Email Adresse ausfüllen.
+            </i>
+          </p>
+          <Next link={"/faq"} text={"Noch Fragen? Hier sind die Antworten"}></Next>
         </form>
       </SignupPageStyles>
-      {/* TODO: Link to FAQs */}
     </>
   )
 }

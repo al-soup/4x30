@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-// TODO: Finsih styling
-// TODO: Make checkboxes bigger
 const SignupPageStyles = styled.div`
   font-size: 2rem;
   input {
@@ -56,6 +54,9 @@ const SignupPageStyles = styled.div`
   }
   .deadline {
     color: var(--orange);
+  }
+  .hint {
+    font-size: 1.5rem;
   }
   .zuppy {
     display: none;

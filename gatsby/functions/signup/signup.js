@@ -1,9 +1,9 @@
-const sanityClient = require("@sanity/client");
+const sanity = require("@sanity/client");
 
 /**
  * Sanity client docs: https://www.sanity.io/docs/js-client
  */
-const client = sanityClient({
+const sanityClient = sanity({
   projectId: process.env.SANITY_PROJECT_ID,
   dataset: process.env.SANITY_DATASET,
   token: process.env.SANITY_TOKEN,
@@ -33,8 +33,6 @@ exports.handler = async (event, context) => {
     }
   }
 
-  // TODO: Check if participation has required form
-
   if (body.password !== process.env.SIGNUP_PASSWORD) {
     return {
       statusCode: 401,
@@ -54,38 +52,31 @@ exports.handler = async (event, context) => {
         _ref: attendance.slotId
       }
     }))
-    console.log("WHERE IS MY KEY???", participation)
 
-    const existing = await client.fetch(
+    const existing = await sanityClient.fetch(
       "*[_type == 'visitor' && email == $currentEmail] {_id}",
-      { currentEmail: body.email }
+      { currentEmail: body.email.trim().toLowerCase() }
     );
 
-    if (existing.length && existing[0]._id) {
-      const doc = {
-        name: body.name,
-        plusone: body.plusone ? body.plusone : "",
-        participation
-      }
+    const docBase = {
+      name: body.name.trim(),
+      plusone: body.plusone ? body.plusone.trim() : "",
+      participation
+    }
 
+    if (existing.length && existing[0]._id) {
       // Update existing visitor
-      const updated = client
-        .patch(existing[0]._id)
-        .set(doc)
-        .commit();
-      console.log("Updated visitor", updated)
+      const updated = sanityClient.patch(existing[0]._id).set(docBase).commit();
+      console.log("Updated visitor", updated);
     }
     else {
       // Create new visitor
-      const doc = {
+      const created = await sanityClient.create({
         _type: "visitor",
-        name: body.name,
-        email: body.email, // TODO: lowercase, trim
-        plusone: body.plusone ? body.plusone : "",
-        participation 
-      };
-      const created = await client.create(doc);
-      console.log(`Created visitor ${created}`)
+        email: body.email.trim().toLowerCase(),
+        ...docBase,
+      });
+      console.log("Created visitor", created);
     }
   } catch (err) {
     console.error(err)
@@ -95,9 +86,8 @@ exports.handler = async (event, context) => {
     }
   }
 
-  // TODO: Save changes to Sanity
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: "Success" })
+    body: JSON.stringify({ message: "Alles klar! Danke für die Anmeldung, das freut uns sehr!" })
   }
 }
