@@ -24,6 +24,7 @@ export default function SignupPage({ data }) {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState("");
+  const MAX_LENGTH = 64;
 
   const handleCheckboxClick = (attendance, i) => e => {
     const checkboxes = [...values.participation];
@@ -79,6 +80,7 @@ export default function SignupPage({ data }) {
               <input
                 type="text"
                 name="name"
+                maxLength={MAX_LENGTH}
                 value={values.name}
                 onChange={(e) => updateValue(values, setValue, e)}
               />
@@ -88,6 +90,7 @@ export default function SignupPage({ data }) {
               <input
                 type="email"
                 name="email"
+                maxLength={MAX_LENGTH}
                 value={values.email}
                 onChange={(e) => updateValue(values, setValue, e)}
               />
@@ -97,6 +100,7 @@ export default function SignupPage({ data }) {
               <input
                 type="text"
                 name="plusone"
+                maxLength="64"
                 value={values.plusone}
                 onChange={(e) => updateValue(values, setValue, e)}
               />
@@ -106,6 +110,7 @@ export default function SignupPage({ data }) {
               <input
                 type="text"
                 name="zuppy"
+                maxLength={MAX_LENGTH}
                 value={values.zuppy}
                 onChange={(e) => updateValue(values, setValue, e)}
               />
@@ -115,6 +120,7 @@ export default function SignupPage({ data }) {
               <input
                 type="password"
                 name="password"
+                maxLength={MAX_LENGTH}
                 value={values.password}
                 onChange={(e) => updateValue(values, setValue, e)}
               />
