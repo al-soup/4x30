@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
 import vintageRumble from "../assets/fonts/vintage-rumble.otf";
-import bobbyJones from "../assets/fonts/BobbyJones.otf"
 import frenchFries from "../assets/fonts/frenchfries.woff";
 import lemonYellowSun from "../assets/fonts/LemonYellowSun.otf"
 
@@ -15,15 +14,11 @@ const Typography = createGlobalStyle`
     src: url(${frenchFries});
   }
   @font-face {
-    font-family: BobbyJones;
-    src: url(${bobbyJones});
-  }
-  @font-face {
     font-family: LemonYellowSun;
     src: url(${lemonYellowSun});
   }
   html {
-    font-family: LemonYellowSun, FrenchFries, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: FrenchFries, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     color: var(--black);
     font-weight: bold;
   }
@@ -36,6 +31,9 @@ const Typography = createGlobalStyle`
     font-size: 2rem;
   }
 
+  p, li {
+    letter-spacing: 0.5px;
+  }
   h1,h2,h3,h4,h5,h6 {
     font-weight: normal;
     margin: 0;
