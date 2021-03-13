@@ -40,7 +40,7 @@ const ScheduleTableStyled = styled.table`
   }
 
   @media (max-width: 500px) {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     .day { writing-mode: tb-rl; }
   }
   @media (max-width: 380px) {
