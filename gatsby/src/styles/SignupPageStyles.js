@@ -15,6 +15,9 @@ const SignupPageStyles = styled.div`
     display: grid;
     grid-template-rows: 1fr;
     gap: 1rem;
+    @media (max-width: 500px) {
+      padding: 5px;
+    }
   }
   .user-detail {
     display: grid;
@@ -23,6 +26,12 @@ const SignupPageStyles = styled.div`
   }
   label + label {
     margin-top: 2rem;
+  }
+  button {
+    width: 100%;
+    @media (max-width: 380px) {
+    max-width: 290px;
+    }
   }
   .checkbox-container {
     margin-bottom: 2rem;

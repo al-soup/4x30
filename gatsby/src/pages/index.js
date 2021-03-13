@@ -11,6 +11,9 @@ const HomePageStyles = styled.div`
     font-size: 3rem;
     text-align: center;
     margin: 4rem 0 4rem 0;
+    @media (max-width: 500px) {
+    font-size: 2rem;
+  }
   }
 `;
 
