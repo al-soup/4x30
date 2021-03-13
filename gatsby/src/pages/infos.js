@@ -10,7 +10,7 @@ export default function InfosPage() {
     .deadline {
       color: var(--orange);
     }
-    .link, ul {
+    .link, .price-list {
       font-size: 2rem;
     }
   `;
@@ -44,7 +44,7 @@ export default function InfosPage() {
           Kontakt: <br/>
           Kosten:
         </p>
-        <ul>
+        <ul className="price-list">
           <li>Pro Nacht, Pro Person = 7.-</li>
           <li>Bezug von Feuerholz = 5.-</li>
         </ul>

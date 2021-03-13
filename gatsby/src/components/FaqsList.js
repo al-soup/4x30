@@ -4,8 +4,11 @@ import styled from "styled-components";
 const FaqsListStyles = styled.div`
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  @media(max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const coronaFaq = {
