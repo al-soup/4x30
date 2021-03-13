@@ -11,6 +11,12 @@ const LogoStyles = styled.div`
   justify-content: center;
   svg {
     max-width: 60%;
+    @media (max-width: 900px) {
+      max-width: 75%;
+    }
+    @media (max-width: 500px) {
+      max-width: 90%;
+    }
   }
 `;
 

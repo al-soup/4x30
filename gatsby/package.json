@@ -22,7 +22,7 @@
     "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-styled-components": "^3.3.10",
-    "gatsby-source-sanity": "^6.0.4",
+    "gatsby-source-sanity": "^6.0.5",
     "isomorphic-fetch": "^2.2.1",
     "netlify-cli": "^2.62.0",
     "netlify-lambda": "^2.0.1",
@@ -30,6 +30,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "react-icons": "^4.2.0",
     "styled-components": "^5.2.0"
   },
   "devDependencies": {

@@ -6,13 +6,11 @@ import SEO from "../components/SEO";
 
 export default function FaqPage({ data }) {
   const faqs = data.faqs.nodes;
-  console.log(faqs);
   return (
     <>
       <SEO title="FAQs" />
       <h1>Fragen & Antworten</h1>
       <FaqList faqs={ faqs } />
-      {/* TODO: Corona hervorheben */}
     </>
   )
 }

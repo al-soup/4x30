@@ -4,15 +4,21 @@ import styled from "styled-components";
 const FaqsListStyles = styled.div`
   margin-top: 2rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(1fr));
   gap: 2rem;
 `;
+
+const coronaFaq = {
+  question: "Und was ist mit Corona?",
+  answer: "Wir werden uns selbstverständlich an die Massnahmen des Bundes und Kantons halten und den Event nur durchführen, insofern dies die pandemische Lage zulässt. Eure Gesundheit liegt uns am Herzen und steht über allem. News und allfälliges Schutzkonzept würden wir hier auf unserer Webseite kommunizieren."
+}
 
 export default function FaqList({ faqs }) {
   return (
     <>
       <FaqsListStyles>
-      {faqs.map(faq => <FaqCard key={faq.id} faq={faq} />)}
+        <FaqCard faq={coronaFaq} />
+        {faqs.map(faq => <FaqCard key={faq.id} faq={faq} />)}
       </FaqsListStyles>
     </>
   )

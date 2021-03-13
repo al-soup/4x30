@@ -25,7 +25,11 @@ const SiteBorderStyles = styled.div`
 const ContentStyles = styled.div`
   background: var(--yellow);  
   padding: 2rem;
-  padding-bottom: 15rem;
+  padding-bottom: 8rem;
+  @media (max-width: 500px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 `;
 
 export default function Layout({ children }) {

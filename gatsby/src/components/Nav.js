@@ -38,6 +38,16 @@ const NavStyles = styled.nav` // is scoped
     &:hover {
       color: var(--red)
     }
+
+    @media (max-width: 650px) {
+      font-size: 4rem;
+    }
+  }
+  @media (max-width: 500px) {
+    ul {
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 `;
 
