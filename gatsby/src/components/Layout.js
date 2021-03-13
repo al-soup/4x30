@@ -27,7 +27,8 @@ const ContentStyles = styled.div`
   padding: 2rem;
   padding-bottom: 8rem;
   @media (max-width: 500px) {
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 `;
 

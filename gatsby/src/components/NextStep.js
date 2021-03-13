@@ -7,7 +7,7 @@ const NextStepStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8rem 1rem;
+  margin-top: 8rem;
   text-align: center;
 `;
 
