@@ -8,6 +8,7 @@ const NextStepStyled = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 8rem;
+  text-align: center;
 `;
 
 export default function NextStep({ text, link }) {

@@ -38,6 +38,14 @@ const ScheduleTableStyled = styled.table`
   .saturday {
     filter: brightness(110%);
   }
+
+  @media (max-width: 500px) {
+    font-size: 1.4rem;
+    .day { writing-mode: tb-rl; }
+  }
+  @media (max-width: 380px) {
+    .when { writing-mode: tb-rl; }
+  }
 `;
 
 export default function ScheduleTable() {
@@ -47,8 +55,8 @@ export default function ScheduleTable() {
       <ScheduleTableStyled>
         <thead>
           <tr className="header">
-            <th className="when day">Tag</th>
-            <th className="when time">Wann</th>
+            <th className="when">Tag</th>
+            <th className="time">Wann</th>
             <th className="what">Was</th>
           </tr>
         </thead>

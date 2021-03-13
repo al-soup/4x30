@@ -26,6 +26,9 @@ const ContentStyles = styled.div`
   background: var(--yellow);  
   padding: 2rem;
   padding-bottom: 8rem;
+  @media (max-width: 500px) {
+    padding: 1rem;
+  }
 `;
 
 export default function Layout({ children }) {
