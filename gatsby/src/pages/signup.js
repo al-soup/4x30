@@ -6,9 +6,9 @@ import { useState } from "react";
 import SignupPageStyles from "../styles/SignupPageStyles";
 import compareSlot from "../utils/compareSlot";
 import NextStep from "../components/NextStep";
+import ResponseMessage from "../components/ResponseMessage";
 
 
-{/* TODO: Sort strings */}
 export default function SignupPage({ data }) {
   const timeSlots = data.timeSlots.nodes;
   // TODO: Persist state with React Context (#38)
@@ -58,14 +58,10 @@ export default function SignupPage({ data }) {
       setError(text.message);
     } else {
       setLoading(false);
-      setMessage("Anmeldung erfolgreich! Wir freuen uns auf dich!");
+      setMessage("Anmeldung hat geklappt! Wir freuen uns auf dich!");
     }
   };
 
-  if (message) {
-    // TODO: Create a success component
-    return <p>SUCCESS</p>
-  }
   return (
     <>
       <SEO title="Anmelden" />
@@ -148,8 +144,7 @@ export default function SignupPage({ data }) {
             )}
           </fieldset>
           <div>
-            {/* TODO: Create error component */}
-            {error ? <p>ERROR: {error}</p> : ""}
+            {(message || error) ? <ResponseMessage message={ error || message } success={ Boolean(message) } /> : ""}
           </div>
           <button type="submit" disabled={loading}>
             {loading ? "Anmeldung wird versendet..." : "Jetzt Anmelden!"}

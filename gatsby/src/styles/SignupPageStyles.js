@@ -62,6 +62,16 @@ const SignupPageStyles = styled.div`
   .zuppy {
     display: none;
   }
+  .success {
+    background-color: #D8FF88;
+    border-style: solid;
+    border-color: #B9F458
+  }
+  .error {
+    background-color: #FFBFBF;
+    border-style: solid;
+    border-color: #FF6969
+  }
 `;
 
 export default SignupPageStyles;

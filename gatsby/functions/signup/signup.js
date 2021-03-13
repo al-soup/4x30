@@ -12,14 +12,14 @@ const sanityClient = sanity({
 
 exports.handler = async (event, context) => {
   const body = JSON.parse(event.body);
-  
+
   if (body.zuppy) {
     return {
       statusCode: 400,
       body: JSON.stringify({ message: "Meeeerp. Error Code 1984" })
     };
   }
-  
+
   const requiredFields = ["name", "email", "password", "participation"];
 
   for (const field of requiredFields) {
@@ -88,6 +88,6 @@ exports.handler = async (event, context) => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ message: "Alles klar! Danke für die Anmeldung, das freut uns sehr!" })
+    body: JSON.stringify({ message: "Success" })
   }
 }
