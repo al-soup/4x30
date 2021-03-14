@@ -34,17 +34,17 @@ const ScheduleTableStyled = styled.table`
   }
   .day {
     font-weight: bold;
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
   .saturday {
     filter: brightness(110%);
   }
-
-  @media (max-width: 500px) {
-    font-size: 1.5rem;
-    .day { writing-mode: tb-rl; }
-  }
-  @media (max-width: 380px) {
-    .when { writing-mode: tb-rl; }
+ .hide-desktop {
+    @media not all and (max-width: 480px) {
+      display: none;
+    }
   }
 `;
 
@@ -55,28 +55,40 @@ export default function ScheduleTable() {
       <ScheduleTableStyled>
         <thead>
           <tr className="header">
-            <th className="when">Tag</th>
-            <th className="time">Wann</th>
-            <th className="what">Was</th>
+            <th className="day">Tag</th>
+            <th>Wann</th>
+            <th>Was</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td className="when day" rowSpan="2">Freitag 9. Juli</td>
-            <td className="when time">17:30</td>
+            <td className="when time">
+              <span className="hide-desktop">Freitag<br/></span>
+              17:30
+            </td>
             <td className="what">Woodstock-Marsch vom <a href="https://goo.gl/maps/bszm8KGzGWFC4qwM8">Bahnhof Aarberg</a> nach <a href="https://goo.gl/maps/AvdBsikeJ7jRXfxa9">Niederried</a> (ca. 4.5km)</td>
           </tr>
           <tr>
-            <td className="when time">Abend</td>
+            <td className="when time">
+              <span className="hide-desktop">Freitag<br/></span>
+              Abend
+              </td>
             <td className="what">Einquartieren auf Zeltplatz, dann BBQ am Lagerfeuer</td>
           </tr>
           <tr>
             <td className="when day saturday" rowSpan="5">Samstag 10. Juli</td>
-            <td className="when time saturday">Mittag</td>
+            <td className="when time saturday">
+              <span className="hide-desktop">Samstag<br/></span>
+              Mittag
+            </td>
             <td className="what saturday">Eröffnung Foodtrucks</td>
           </tr>
           <tr>
-            <td className="when time saturday">Nachmittag</td>
+            <td className="when time saturday">
+              <span className="hide-desktop">Samstag<br/></span>
+              Nachmittag
+            </td>
             <td className="what saturday">
               <ul>
                 <li>Pingpong</li>
@@ -91,28 +103,46 @@ export default function ScheduleTable() {
             </td>
           </tr>
           <tr>
-            <td className="when time saturday">Vorabend</td>
+            <td className="when time saturday">
+              <span className="hide-desktop">Samstag<br/></span>
+              Vorabend
+            </td>
             <td className="what saturday">Barbetrieb und Foodtrucks <br/> Ansprache der vier Geburtstagsjungen</td>
           </tr>
           <tr>
-            <td className="when time saturday">Abend</td>
+            <td className="when time saturday">
+              <span className="hide-desktop">Samstag<br/></span>
+              Abend
+            </td>
             <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank" rel="noopener noreferrer">Tschäppi und Manu</a> am Lagerfeuer</td>
           </tr>
           <tr>
-            <td className="when time saturday">Nacht</td>
+            <td className="when time saturday">
+              <span className="hide-desktop">Samstag<br/></span>
+              Nacht
+            </td>
             <td className="what saturday">Woodstock-Party im Zelt mit DJ’s von Hospitium Crew sowie Comeback von Tim&Struppi</td>
           </tr>
           <tr>
             <td className="when day" rowSpan="3">Sonntag 11. Juli</td>
-            <td className="when time">Vormittag</td>
+            <td className="when time">
+              <span className="hide-desktop">Sonntag<br/></span>
+              Vormittag
+            </td>
             <td className="what">Brunch</td>
           </tr>
           <tr>
-            <td className="when time">Mitte Nachmittag</td>
+            <td className="when time">
+              <span className="hide-desktop">Sonntag<br/></span>
+              Mitte Nachmittag
+            </td>
             <td className="what">Baden & Chillen <br/> Zelt abbauen, aufräumen</td>
           </tr>
           <tr>
-            <td className="when time">Späterer Nachmittag</td>
+            <td className="when time">
+              <span className="hide-desktop">Sonntag<br/></span>
+              Späterer Nachmittag
+            </td>
             <td className="what">Gemeinsamer Woodstock-Marsch zurück nach Aarberg</td>
           </tr>
 
