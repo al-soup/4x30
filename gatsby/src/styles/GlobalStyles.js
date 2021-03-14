@@ -49,7 +49,6 @@ const GlobalStyles = createGlobalStyle`
     }
   }
 
-    // TODO: Try different img renderers
   .gatsby-image-wrapper img[src*=base64\\,] {
     image-rendering: -moz-crisp-edges;
     image-rendering: pixelated;

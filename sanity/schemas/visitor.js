@@ -39,23 +39,4 @@ export default {
       ]
     }
   ],
-  // preview: {
-  //   select: {
-  //     title: "name",
-  //     slot0: "attendance.0.title",
-  //     slot1: "attendance.1.title",
-  //     slot2: "attendance.2.title",
-  //     slot3: "attendance.3.title",
-  //     slot4: "attendance.4.title",
-  //   },
-  //   prepare: ({ title, ...timeSlots }) => {
-  //     return {
-  //       title,
-  //       subtitle: Object.values(timeSlots)
-  //         .filter(Boolean)
-  //         .sort()
-  //         .join("  | ")
-  //     };
-  //   }
-  // }
 }
