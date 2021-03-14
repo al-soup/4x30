@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@sanity/client": "^2.2.6",
+    "discord.js": "^12.5.1",
     "install": "^0.13.0",
     "npm": "^7.6.1"
   }

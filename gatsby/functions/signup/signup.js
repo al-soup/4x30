@@ -1,48 +1,56 @@
-const sanity = require("@sanity/client");
+const Sanity = require("@sanity/client");
+const Discord = require("discord.js");
+
+/**
+ * Discord client docs: https://discordjs.guide/
+ */
+const discordClient = new Discord.Client();
 
 /**
  * Sanity client docs: https://www.sanity.io/docs/js-client
  */
-const sanityClient = sanity({
+const sanityClient = Sanity({
   projectId: process.env.SANITY_PROJECT_ID,
   dataset: process.env.SANITY_DATASET,
   token: process.env.SANITY_TOKEN,
   useCdn: false
 });
 
+function initDiscord(client) {
+  return new Promise((resolve, reject) => {
+    client.once("ready", () => resolve());
+  })
+}
+
+function createResponse(statusCode, message) {
+  return {
+    statusCode,
+    body: JSON.stringify(message)
+  };
+}
+
 exports.handler = async (event, context) => {
   const body = JSON.parse(event.body);
 
   if (body.zuppy) {
-    return {
-      statusCode: 400,
-      body: JSON.stringify({ message: "Meeeerp. Error Code 1984" })
-    };
+    return createResponse(400, "Meeeerp. Error Code 1984");
   }
 
   const requiredFields = ["name", "email", "password", "participation"];
 
-  for (const field of requiredFields) {
-    if (!body[field]) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          message: `Es fehlen Angaben. Bitte alle Textfelder ausfüllen! Das Feld ${field} fehlt.`
-        })
-      };
+  for (const requiredField of requiredFields) {
+    if (!body[requiredField]) {
+      return createResponse(400, `Es fehlen Angaben. Bitte alle Textfelder ausfüllen! Das Feld ${requiredField} fehlt.`);
     }
   }
 
   if (body.password !== process.env.SIGNUP_PASSWORD) {
-    return {
-      statusCode: 401,
-      body: JSON.stringify({
-        message: `Falsches Passwort. Du findest das Passwort auf dem Flyer oder frage einer der BirthdayBoys`
-      })
-    };
+    return createResponse(401, "Falsches Passwort. Du findest das Passwort auf dem Flyer oder frage einer der BirthdayBoys");
   }
 
   try {
+    let created;
+    let updated;
     const participation = body.participation.map((attendance, i) => ({
       _type: "attendance",
       _key: `${attendance.slotId}_key_${i}`,
@@ -66,28 +74,38 @@ exports.handler = async (event, context) => {
 
     if (existing.length && existing[0]._id) {
       // Update existing visitor
-      const updated = sanityClient.patch(existing[0]._id).set(docBase).commit();
+      updated = sanityClient.patch(existing[0]._id).set(docBase).commit();
       console.log("Updated visitor", updated);
     }
     else {
       // Create new visitor
-      const created = await sanityClient.create({
+      created = await sanityClient.create({
         _type: "visitor",
         email: body.email.trim().toLowerCase(),
         ...docBase,
       });
       console.log("Created visitor", created);
     }
-  } catch (err) {
-    console.error(err)
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: "Interner Fehler. Bitte gib einem der BirthdayBoys Bescheid :(" })
+    // Notify via Discord
+    try {
+      await Promise.all([
+        initDiscord(discordClient),
+        discordClient.login(process.env.DISCORD_BOT_TOKEN)
+      ]);
+  
+      const channel = discordClient.channels.cache.get(process.env.DISCORD_CHANNEL_ID)
+      const timeSlots = body.participation.filter((a) => a.attending).map((a) => a.title).sort().join(" | ");
+      channel.send(
+        `${created ? "NEUE ANMELDUNG:" : "ÄNDERUNG:"} ${body.name} (${body.email}) ${body.plusone ? ("mit " + body.plusone) : ""} -> ${timeSlots || "Keine Anmeldung"}`
+      );
+    } catch (err) {
+      console.error("Could not send visitor notification:", err)
     }
+
+  } catch (err) {
+    console.error("Visitor update error", err)
+    return createResponse(500, "Interner Fehler. Bitte gib einem der BirthdayBoys Bescheid :(")
   }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: "Success" })
-  }
+  return createResponse(200, "Success");
 }
