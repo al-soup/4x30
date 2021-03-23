@@ -13,7 +13,7 @@ const FaqsListStyles = styled.div`
 
 const coronaFaq = {
   question: "Und was ist mit Corona?",
-  answer: "Wir werden uns selbstverständlich an die Massnahmen des Bundes und Kantons halten und den Event nur durchführen, insofern dies die pandemische Lage zulässt. Eure Gesundheit liegt uns am Herzen und steht über allem. News und allfälliges Schutzkonzept würden wir hier auf unserer Webseite kommunizieren."
+  answer: "Wir werden uns selbstverständlich an die Massnahmen des Bundes und Kantons halten und den Event nur durchführen, insofern dies die pandemische Lage zulässt. Eure Gesundheit liegt uns am Herzen und steht über allem. News und allfälliges Schutzkonzept werden wir hier auf unserer Webseite kommunizieren."
 }
 
 export default function FaqList({ faqs }) {
