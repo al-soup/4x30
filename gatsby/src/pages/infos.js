@@ -29,19 +29,20 @@ export default function InfosPage() {
         <h1>Ablauf</h1>
         <ScheduleTable />
         <h1>Anfahrt</h1>
-        <p>Die Anfahrt erfolgt von Kallnach über die Krosenrain in die Kallnachstrasse bis nach Niederried b. Kallnach. Ab Niederried ist der Camping beschildert. Vor Ort hat es genügend Parkplätze, die Parkplätze gehören zum Campingplatz. Den Weisungen und Richtlinien des Campings ist Folge zu tragen.</p>
-        <p>Alternativ kann die Anfahrt auch via Bahn erfolgen. Ab Aarberg: Schöner Spaziergang entlang der Aare Richtung Sportplatz Radelfingen. Der Weg führt grössten Teils auf einer unbefahrenen Nebenstrasse entlang der Aare bis zum Campingplatz. Distanz = 4.5km / Dauer = ca. 60min.</p>
-        <p>Ab Kallnach: Gehweg entlang der Hauptstrasse und entlang Nebenstrassen. Distanz = 2.5km / Dauer = ca. 30min.</p>
-        <h1>Verpfelgung</h1>
-        <p><i>Freitag:</i><br/>Am Freitagabend ist jeder selbständig für die Verpflegung zuständig. Es gibt auf dem Camping Feuerstellen, welche benutzt werden können. Vor Ort wird es möglich sein, Bier und andere Getränke zu beziehen.</p>
-        <p><i>Samstag:</i><br/>Ab Samstagmittag wird ein Foodtruck stationiert sein. Es werden asiatische und Italienische Spezialitäten angeboten gemäss Preisliste vor Ort. Im Verlaufe des späteren Nachmittags wird dann zusätzlich der Barbetrieb lanciert. Weiterhin stehen auch die Feuerstellen zur Verfügung.</p>
+        <p><i>Woodstock Marsch:</i><br/> Am Freitag um 17:30 sind alle dazu eingeladen, zusammen mit uns vom Bahnhof Aarberg gemütlich zum Campingplatz zu spazieren. Am Sonntagnachmittag werden wir zum Abschluss des Festes auch alle zusammen zurück nach Aarberg gehen. Falls du nicht von Anfang an dabei bist, bieten sich verschiedene Anreisemöglichkeiten an.</p>
+        <p><i>ÖV ab Aarberg:</i><br/>Schöner Spaziergang entlang der Aare Richtung Sportplatz Radelfingen. Der Weg führt grössten Teils auf einer unbefahrenen Nebenstrasse entlang der Aare bis zum Campingplatz. Distanz = 4.5km / Dauer = ca. 60min.</p>
+        <p><i>ÖV ab Kallnach:</i><br/> Gehweg entlang der Hauptstrasse und entlang Nebenstrassen. Distanz = 2.5km / Dauer = ca. 30min.</p>
+        <p><i>Mit dem Auto:</i><br/> Die Anfahrt erfolgt von Kallnach über die Krosenrain in die Kallnachstrasse bis nach Niederried b. Kallnach. Ab Niederried ist der Camping beschildert. Vor Ort hat es Parkplätze, wenn auch nur in begrenzter Anzahl. Die Parkplätze gehören zum Campingplatz. Den Weisungen und Richtlinien des Campings ist Folge zu tragen.</p>
+        <h1>Verpflegung</h1>
+        <p><i>Freitag:</i><br/>Am Freitagabend ist jeder selber für die Verpflegung zuständig. Es gibt auf dem Camping Feuerstellen, welche benutzt werden können. Vor Ort wird es möglich sein, Bier und andere Getränke zu beziehen.</p>
+        <p><i>Samstag:</i><br/>Ab Samstagmittag wird ein Foodtruck stationiert sein. Es werden asiatische und Italienische Spezialitäten angeboten gemäss Preisliste vor Ort. Im Verlaufe des Nachmittags wird dann zusätzlich der Barbetrieb lanciert. Weiterhin stehen auch die Feuerstellen zur Verfügung.</p>
+        <p>Barbetrieb, Foodtrucks und Musikanlage wird von der <a href="http://www.hospitium.ch/" target="_blank" rel="noreferrer">Hospitium Lounge</a> organisiert.</p>
         <p><i>Sonntag:</i><br/>Am Sonntag wird von uns ein Brunch offeriert.</p>
         <h1>Camping</h1>
-        <p>Von Freitag auf Samstag und von Samstag auf Sonntag besteht die Möglichkeit vor Ort zu Campieren. Wir bitten euch, wenn möglich die Übernachtungen auf der Anmeldung bereits anzugeben. Grundsätzlich kann auf dem Camping nicht reserviert werden. Wir gehen aber davon aus, das es genügend Plätze vorhanden sind.</p>
+        <p>Von Freitag auf Samstag und von Samstag auf Sonntag besteht die Möglichkeit vor Ort zu Campieren. Wir bitten euch, wenn möglich die Übernachtungen bei der Anmeldung bereits anzugeben. Grundsätzlich kann auf dem Camping nicht reserviert werden. Wir gehen aber davon aus, dass genügend Plätze vorhanden sind. Bitte ein eigenes Zelt mitbringen :)</p>
         <p>
-          Camping Niederried b. Kallnach<br/><br/>
-          Adresse: <br/>
-          Kontakt: <br/>
+          <a href="https://goo.gl/maps/AvdBsikeJ7jRXfxa9" target="_blank" rel="noreferrer">Camping Niederried bei Kallnach</a>
+          <br/><br/>
           Kosten:
         </p>
         <ul className="price-list">

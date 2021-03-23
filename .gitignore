@@ -22,7 +22,7 @@ speed-measure-plugin*.json
 !**/.vscode/launch.json
 !**/.vscode/extensions.json
 **/.history/*
-4x30.code-workspace
+4x30party.code-workspace
 
 # misc
 **/.sass-cache

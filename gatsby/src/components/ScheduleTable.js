@@ -67,7 +67,7 @@ export default function ScheduleTable() {
               <span className="hide-desktop">Freitag<br/></span>
               17:30
             </td>
-            <td className="what">Woodstock-Marsch vom <a href="https://goo.gl/maps/bszm8KGzGWFC4qwM8">Bahnhof Aarberg</a> nach <a href="https://goo.gl/maps/AvdBsikeJ7jRXfxa9">Niederried</a> (ca. 4.5km)</td>
+            <td className="what">Woodstock-Marsch vom <a href="https://goo.gl/maps/bszm8KGzGWFC4qwM8" target="_blank" rel="noreferrer">Bahnhof Aarberg</a> nach <a href="https://goo.gl/maps/AvdBsikeJ7jRXfxa9" target="_blank" rel="noreferrer">Niederried</a> (ca. 4.5km)</td>
           </tr>
           <tr>
             <td className="when time">
@@ -82,7 +82,7 @@ export default function ScheduleTable() {
               <span className="hide-desktop">Samstag<br/></span>
               Mittag
             </td>
-            <td className="what saturday">Eröffnung Foodtrucks</td>
+            <td className="what saturday">Eröffnung Barbetrieb & Foodtrucks</td>
           </tr>
           <tr>
             <td className="when time saturday">
@@ -107,21 +107,21 @@ export default function ScheduleTable() {
               <span className="hide-desktop">Samstag<br/></span>
               Vorabend
             </td>
-            <td className="what saturday">Barbetrieb und Foodtrucks <br/> Ansprache der vier Geburtstagsjungen</td>
+            <td className="what saturday">Weiterhin Barbetrieb & Foodtrucks <br/> Ansprache der vier Geburtstagsjungen</td>
           </tr>
           <tr>
             <td className="when time saturday">
               <span className="hide-desktop">Samstag<br/></span>
               Abend
             </td>
-            <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank" rel="noopener noreferrer">Tschäppi und Manu</a> am Lagerfeuer</td>
+            <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank" rel="noreferrer">Tschäppi und Manu</a> am Lagerfeuer</td>
           </tr>
           <tr>
             <td className="when time saturday">
               <span className="hide-desktop">Samstag<br/></span>
               Nacht
             </td>
-            <td className="what saturday">Woodstock-Party im Zelt mit DJ’s von Hospitium Crew sowie Comeback von Tim&Struppi</td>
+            <td className="what saturday">Woodstock-Party im Zelt mit DJ’s von <a href="http://www.hospitium.ch/" target="_blank" rel="noreferrer">Hospitium Crew</a> sowie Comeback von Tim&Struppi</td>
           </tr>
           <tr>
             <td className="when day" rowSpan="3">Sonntag 11. Juli</td>
@@ -134,7 +134,7 @@ export default function ScheduleTable() {
           <tr>
             <td className="when time">
               <span className="hide-desktop">Sonntag<br/></span>
-              Mitte Nachmittag
+              Nachmittag
             </td>
             <td className="what">Baden & Chillen <br/> Zelt abbauen, aufräumen</td>
           </tr>
