@@ -47,9 +47,7 @@ export default function SignupPage({ data }) {
     const body = { ...values }
     const res = await fetch(`${process.env.GATSBY_SERVERLESS_BASE}/signup`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body)
     })
     const text = JSON.parse(await res.text());
