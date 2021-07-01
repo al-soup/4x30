@@ -11,15 +11,21 @@ const FaqsListStyles = styled.div`
   }
 `;
 
+const isItHappeningFaq = {
+  question: "Findet die Party wie geplant statt?",
+  answer: "YES!! 🥳️ Die Party wurde von der Gemeinde Kallnach bewilligt und wir werden uns an die Corona-Bestimmungen halten."
+}
+
 const coronaFaq = {
   question: "Und was ist mit Corona?",
-  answer: "Wir werden uns selbstverständlich an die Massnahmen des Bundes und Kantons halten und den Event nur durchführen, insofern dies die pandemische Lage zulässt. Eure Gesundheit liegt uns am Herzen und steht über allem. News und allfälliges Schutzkonzept werden wir hier auf unserer Webseite kommunizieren."
+  answer: "Eure Gesundheit liegt uns am Herzen und steht über allem. Wir bitten alle, die nicht doppelt geimpft sind, vor der Anreise noch einen Corona Schnelltest durchzuführen. Im Festzelt gilt zudem Maskenpflicht. Alles weitere werdet ihr vor Ort erfahren."
 }
 
 export default function FaqList({ faqs }) {
   return (
     <>
       <FaqsListStyles>
+        <FaqCard faq={isItHappeningFaq} />
         <FaqCard faq={coronaFaq} />
         {faqs.map(faq => <FaqCard key={faq.id} faq={faq} />)}
       </FaqsListStyles>

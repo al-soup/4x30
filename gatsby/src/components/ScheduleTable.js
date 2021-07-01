@@ -77,12 +77,21 @@ export default function ScheduleTable() {
             <td className="what">Einquartieren auf Zeltplatz, dann BBQ am Lagerfeuer</td>
           </tr>
           <tr>
-            <td className="when day saturday" rowSpan="5">Samstag 10. Juli</td>
+            <td className="when day saturday" rowSpan="6">Samstag 10. Juli</td>
             <td className="when time saturday">
               <span className="hide-desktop">Samstag<br/></span>
               Mittag
             </td>
             <td className="what saturday">Eröffnung Barbetrieb & Foodtrucks</td>
+          </tr>
+          <tr>
+            <td className="when time saturday">
+              <span className="hide-desktop">Samstag<br/></span>
+              14:00
+            </td>
+            <td className="what saturday">
+              Ansprache der vier Geburtstagsjungen
+            </td>
           </tr>
           <tr>
             <td className="when time saturday">
@@ -107,21 +116,21 @@ export default function ScheduleTable() {
               <span className="hide-desktop">Samstag<br/></span>
               Vorabend
             </td>
-            <td className="what saturday">Weiterhin Barbetrieb & Foodtrucks <br/> Ansprache der vier Geburtstagsjungen</td>
+            <td className="what saturday">Weiterhin Barbetrieb & Foodtrucks</td>
           </tr>
-          <tr>
+           <tr>
             <td className="when time saturday">
               <span className="hide-desktop">Samstag<br/></span>
               Abend
             </td>
-            <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank" rel="noreferrer">Tschäppi und Manu</a> am Lagerfeuer</td>
+            <td className="what saturday">Woodstock-Party mit DJ’s von <a href="http://www.hospitium.ch/" target="_blank" rel="noreferrer">Hospitium Crew</a> sowie Comeback von Tim&Struppi</td>
           </tr>
           <tr>
             <td className="when time saturday">
               <span className="hide-desktop">Samstag<br/></span>
-              Nacht
+              Ca. 23:00
             </td>
-            <td className="what saturday">Woodstock-Party im Zelt mit DJ’s von <a href="http://www.hospitium.ch/" target="_blank" rel="noreferrer">Hospitium Crew</a> sowie Comeback von Tim&Struppi</td>
+            <td className="what saturday">Musik von <a href="https://copyandshake-1.jimdosite.com/" target="_blank" rel="noreferrer">Tschäppi und Manu</a></td>
           </tr>
           <tr>
             <td className="when day" rowSpan="3">Sonntag 11. Juli</td>
