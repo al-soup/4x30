@@ -34,7 +34,7 @@ export default function InfosPage({ data }) {
     <>
       <SEO title="Infos" />
       <InfosPageStyles>
-        <h3 className="deadline">Anmeldefrist bis 25. Mai!</h3>
+        <h3 className="deadline">Falls du dich gefragt hast: Ja, die Party findet statt!!</h3>
         <h1>4x30 Party Infos</h1>
         <h2>Freitag 9. Juli bis Sonntag 11. Juli 2021</h2>
         <p>Im Aareböötli sitzend wurde uns im vergangenen Jahr endgültig bewusst: Die 30 naht und damit verbunden die Frage; wie soll dieses runde Jubiläum würdig gefeiert werden? Anstelle vier Sausen zu schmeissen bot sich aufgrund unseres teils gemeinsamen Umfelds die Gelegenheit, diese Vorfreude und Motivation zu bündeln und zu einem grossen Event zu vereinen. Als Austragungsort einigten wir uns auf die Zieldestination des damaligen Bootsausflugs im letzten Sommer: Der Zeltplatz Niederried.</p>
@@ -64,7 +64,7 @@ export default function InfosPage({ data }) {
             <p>
               <a href="https://goo.gl/maps/AvdBsikeJ7jRXfxa9" target="_blank" rel="noreferrer">Camping Niederried bei Kallnach</a>
               <br/><br/>
-              Kosten:
+              Die Kosten werden bitte jeweils direkt mit dem Platzwart des Campingplatzes abgerechnet:
             </p>
             <ul className="price-list">
               <li>Pro Nacht, Pro Person = 7.-</li>

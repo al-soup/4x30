@@ -64,9 +64,10 @@ export default function SignupPage({ data }) {
     <>
       <SEO title="Anmelden" />
       <SignupPageStyles>
-        <h3 className="deadline">Anmeldefrist bis 25. Mai!</h3>
+        <h3 className="deadline">Falls du dich gefragt hast: Ja, die Party findet statt!!</h3>
         <h1>Anmelden</h1>
-        <p>Damit wir wissen, mit wie vielen Leuten wir ungefähr rechnen können, bitten wir dich, bis zum 25. Mai die Anmeldung auszufüllen.</p>
+        <p>Damit wir wissen, mit wie vielen Leuten wir ungefähr rechnen können, bitten wir dich, die Anmeldung auszufüllen.</p>
+        <p>Die Anmeldefrist ist schon lange vorbei. Aber wenn du uns wissen lassen möchtest, dass du troztdem vorbei schaust (oder du einfach gerne Formulare ausfüllst), dann nur zu!</p>
         <form onSubmit={submitSignup}>
           <fieldset className="who" disabled={loading}>
             <legend>Wer bist du?</legend>
@@ -76,7 +77,7 @@ export default function SignupPage({ data }) {
                 type="text"
                 name="name"
                 required
-                minLength="3"
+                minLength="3" 
                 maxLength={MAX_LENGTH}
                 value={values.name}
                 onChange={(e) => updateValue(values, setValue, e)}
